@@ -140,7 +140,7 @@ export default grammar({
     escape_sequence: _ => token(prec(1, seq(
       '\\',
       choice(
-        /[0abefnrtv'"\\]/,
+        /[0abcefnrtv'"\\]/,
         /x[0-9a-fA-F]{2}/,
         /u[0-9a-fA-F]{4}/,
         /U[0-9a-fA-F]{8}/,
